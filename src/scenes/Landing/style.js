@@ -8,7 +8,7 @@ export const LandingPage = styled.section`
     padding: 2.5rem 0;
     max-width: 1500px;
     height: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 0 50px;
 
     .containerImage {
@@ -66,7 +66,7 @@ export const LandingPage = styled.section`
         width: 60vw;
         overflow: hidden;
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         right: 0;
         z-index: 0;
     }
@@ -77,6 +77,7 @@ export const LandingPage = styled.section`
         justify-content: space-between;
         align-items: center;
         height: 100vh;
+        margin: 0 auto;
 
         .containerImage {
             order: 2;
