@@ -29,8 +29,8 @@ const MotionIcons = ({ link, name, delay }) => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ delay: delay, duration: 0.5 }}
                 variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1 },
+                    hidden: { opacity: 0, x: -50 },
+                    visible: { opacity: 1 ,x: 0 },
                 }}
             >
                 {Icon && (

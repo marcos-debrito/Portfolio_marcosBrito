@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { LandingPage, AnchorDownload } from "./style";
 import profileImage from "../../assets/profilePhoto.png";
 import quadradinhos from "../../assets/quadradinhos_inicio.svg";
-import SocialMediaIcons from "../Components/SocialMedia/SocialMediaIcons.jsx";
+import SocialMediaIcons from "../../Components/SocialMedia/SocialMediaIcons";
 
 const Landing = () => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1420px)");
