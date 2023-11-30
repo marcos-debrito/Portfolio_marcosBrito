@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const LandingPage = styled.section`
     display: flex;
@@ -7,6 +7,7 @@ export const LandingPage = styled.section`
     gap: 16px;
     padding: 2.5rem 0;
     max-width: 1500px;
+    height: 100%;
     margin: 0 auto;
     padding: 0 50px;
 
@@ -75,7 +76,7 @@ export const LandingPage = styled.section`
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        height: 100%;
+        height: 100vh;
 
         .containerImage {
             order: 2;
