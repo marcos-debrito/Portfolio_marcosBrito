@@ -5,7 +5,7 @@ export const Nav = styled.nav`
     width: 100%;
     position: fixed;
     top: 0px;
-    padding: 1.1rem 0rem;
+    padding: 0.2rem 0.2rem;
     background: #010026d4;
     /* backdrop-filter:; */
     backdrop-filter: ${(props) => (props.$blur ? "blur(3px)" : "none")};
@@ -17,7 +17,7 @@ export const Nav = styled.nav`
         margin: 0 auto;
         /* width: 80%; */
         max-width: 1500px;
-        padding: 0 1rem;
+        /* padding: 0 1rem; */
 
         .desktop {
             margin: 0 1rem;
@@ -64,7 +64,6 @@ export const MenuMobile = styled.div`
         display: flex;
         flex-direction: row-reverse;
         padding: 50px 40px 0 0;
-      
     }
 
     .Container {

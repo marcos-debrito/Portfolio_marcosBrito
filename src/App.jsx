@@ -10,14 +10,16 @@ import Projects from "./scenes/Projects/index.jsx";
 import Contact from "./scenes/Contact/index.jsx/";
 
 import LineGradient from "./Components/LineGradient/";
+import { Toaster } from "react-hot-toast";
 
 function App() {
     const [selectedPage, setSelectedPage] = useState("início");
     const isAboveSmallScreens = useMediaQuery("(min-width: 600px)");
-    /* Retorna true quando está acima de 1060px e false caso o contrário*/ 
+    /* Retorna true quando está acima de 1060px e false caso o contrário*/
 
     return (
         <>
+            <Toaster />
             <GlobalStyle />
             <NavBar
                 selectedPage={selectedPage}

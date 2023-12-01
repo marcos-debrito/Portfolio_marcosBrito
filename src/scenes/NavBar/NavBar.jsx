@@ -13,15 +13,20 @@ const Link = ({
     const lowerCasePage = page.toLowerCase();
     /* Opções possíveis: inicio, habilidades, projetos, contato */
 
+    const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
+
     const animationAfterClick = () => {
         /* Change the page */
         setSelectedPage(lowerCasePage);
 
-        /* Close de right modal */
+        /* Caso esteja em desktop, nao executa a animação do mobile! */
+        if (isAboveSmallScreens) return;
+
         setTimeout(() => {
             animationButtonMobile();
         }, 200);
     };
+
     return (
         <AnchorLink
             className={`animation ${

@@ -43,6 +43,10 @@ h1{
     font-size: 36px;
 }
 
+input{
+    all: unset;
+}
+
 .animation {
     transition: 0.3s ease-in-out;
     text-decoration: none
@@ -55,28 +59,23 @@ h1{
 .início, .habilidades, .projetos, .contato{
     color: var(--c-secondary)
 }
-/* 
-.habilidades{
-    color: var(--c-secondary)
-}
-
-.projetos{
-    color: var(--c-secondary)
-}
-
-.contato{
-    color: var(--c-secondary)
-} */
 
 .DotStyle{
     width: 80%;
     margin: 0 auto;
     height: 100%
 }
+
+body::-webkit-scrollbar {
+  width: 2px; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--c-secondary); 
+  border-radius: 2px; 
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--c-primary); 
+}
 `;
-
-/* 
-font-family: 'Comfortaa', sans-serif;
-font-family: 'Open Sans', sans-serif;
-
-*/
