@@ -31,7 +31,7 @@ export const SkillSection = styled.section`
         margin-top: 50px;
         max-width: 500px;
         background: #091034;
-        z-index: 50;
+        z-index: 5;
     }
 
     .square {

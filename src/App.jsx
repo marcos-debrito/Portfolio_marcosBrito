@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 import useMediaQuery from "./Hooks";
 import NavBar from "./scenes/NavBar/NavBar";
@@ -10,6 +10,8 @@ import Projects from "./scenes/Projects/index.jsx";
 import ContactMe from "./scenes/Contact/index.jsx/";
 import { Toaster } from "react-hot-toast";
 import ScrollToTopOnReload from "./Components/scrollTop/index.jsx";
+
+import { motion } from "framer-motion";
 
 function App() {
     const [selectedPage, setSelectedPage] = useState("início");
@@ -34,7 +36,7 @@ function App() {
                     />
                 </div>
             )}
-
+            
             <Landing />
             <Skills />
             <Projects />

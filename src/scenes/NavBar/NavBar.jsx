@@ -50,11 +50,7 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-    /* 
-    Retorna true quando está acima de 768px e false caso o contrário,
-    portanto, iremos renderizar o menu hamburguer quando essa condição 
-    for falsa
-    */
+  
 
     const animationButtonMobile = () => {
         setIsMenuOpen(true);
