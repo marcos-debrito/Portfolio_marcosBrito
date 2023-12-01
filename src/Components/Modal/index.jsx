@@ -44,7 +44,7 @@ export const Modal = ({ setIsOpen }) => {
                 }}
             >
                 <div className="left">
-                    <p>Detalhes do projeto</p>
+                    <p>Detalhes do Projeto</p>
                 </div>
                 <div className="right">
                     {isAboveMediumScreens && (

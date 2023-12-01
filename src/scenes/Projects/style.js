@@ -22,13 +22,16 @@ export const ProjectSection = styled.section`
         justify-content: center;
         gap: 4px;
         z-index: 10;
+        max-height: 60vh;
 
         div {
             display: flex;
             justify-content: center;
+
             img {
                 width: 35vw;
-                max-width: 300px;
+                max-width: 250px;
+                max-height: 250px;
             }
         }
 
@@ -47,6 +50,7 @@ export const ProjectSection = styled.section`
         bottom: 0px;
         z-index: -10;
     }
+
     @media (min-width: 1060px) {
         /* flex-direction: row; */
         justify-content: space-between;
@@ -54,14 +58,13 @@ export const ProjectSection = styled.section`
         min-height: 100vh;
 
         .titleProject {
-            color: yellow;
             margin-top: 150px;
         }
 
         .containerProjects {
             display: flex;
             flex-direction: row;
-            max-width: 1200px;
+            max-width: 800px;
         }
     }
 `;

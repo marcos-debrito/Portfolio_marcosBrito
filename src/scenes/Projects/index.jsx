@@ -30,7 +30,7 @@ const Projects = () => {
                     visible: { opacity: 1, y: 0 },
                 }}
             >
-                <h2>Meus projetos</h2>
+                <h1>Meus projetos</h1>
             </motion.div>
             <div className="containerProjects">
                 {projectsData.map((project, index) => (

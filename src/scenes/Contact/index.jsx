@@ -40,7 +40,19 @@ const ContactMe = () => {
 
     return (
         <ContactSection id="contato">
-            <h2>Entre em contato</h2>
+            <motion.h1
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.4 }}
+                variants={{
+                    hidden: { opacity: 0, scale: 0.5 },
+                    visible: { opacity: 1, scale: 1 },
+                }}
+            >
+                Entre em contato
+            </motion.h1>
+
             {/* Colocar animação depois */}
             <div className="ContactContainer">
                 <form

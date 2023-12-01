@@ -22,25 +22,22 @@ const MotionIcons = ({ link, name, delay }) => {
     const Icon = getIcon();
 
     return (
-        <div className="">
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: delay, duration: 0.5 }}
-                variants={{
-                    hidden: { opacity: 0, x: -50 },
-                    visible: { opacity: 1, x: 0 },
-                }}
-            >
-                {Icon && (
-                    <Icon
-                        size={30}
-                        onClick={rediretionate}
-                    />
-                )}
-            </motion.div>
-        </div>
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: delay, duration: 0.5 }}
+            variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+            }}
+        >
+            <Icon
+                className="socialmediaIcon"
+                size={30}
+                onClick={rediretionate}
+            />
+        </motion.div>
     );
 };
 

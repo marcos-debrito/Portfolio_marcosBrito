@@ -8,8 +8,8 @@ export const ContactSection = styled.section`
     max-width: 1500px;
     min-height: 100vh;
     margin: 0 auto;
-    /* padding: 0 50px; */
     position: relative;
+    margin: 200px auto;
 
     .ContactContainer {
         margin: 0 auto;
@@ -50,6 +50,11 @@ export const ContactSection = styled.section`
                     padding: 5px 12px;
                     color: white;
                     border: 1px solid transparent;
+                }
+                .name::placeholder,
+                .email::placeholder,
+                .text::placeholder {
+                    color: white;
                 }
 
                 .name:hover,

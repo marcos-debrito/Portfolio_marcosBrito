@@ -3,7 +3,7 @@ import { SocialMediaContainer } from "./style";
 
 const SocialMediaIcons = () => {
     return (
-        <SocialMediaContainer className="flex justify-center md:justify-start my-1 gap-7">
+        <SocialMediaContainer>
             <MotionIcons
                 link="https://www.linkedin.com/in/marcos-debrito/"
                 name="linkedin"

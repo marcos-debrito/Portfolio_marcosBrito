@@ -5,11 +5,17 @@ export const GlobalStyle = createGlobalStyle`
     --font-primary: "Comfortaa", sans-serif;
     --font-secondary: "Open Sans", sans-serif;
 
-    --c-primary: #010026;   /* Azul escuro */
-    --c-secondary: #DF6A6A; /* Salmão */
+    --c-primary: #010026;   
+    --c-secondary: #DF6A6A; 
     --c-blue: #2CBCE9;
     --c-red: #DC4492;
     --c-yellow: #FDCC49;
+}
+
+html {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 body,html{
