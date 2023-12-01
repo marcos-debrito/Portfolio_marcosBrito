@@ -1,11 +1,22 @@
 import { ProjectSection } from "./style.js";
 import { motion } from "framer-motion";
-import projectsData from "../../data/index.jsx";
+import projectsData from "../../data/index.js";
 import quadradinhos from "../../assets/quadradinhos_projetos.svg";
 import useMediaQuery from "../../Hooks/index.jsx";
+import { useState } from "react";
+import { Modal } from "../../Components/Modal/index.jsx";
 
 const Projects = () => {
+    const [isOpen, setIsOpen] = useState(false);
     const isAboveMediumScreens = useMediaQuery("(min-width: 1420px)");
+
+    const putInLocalStorage = (project) => {
+        const stringfy = JSON.stringify(project);
+
+        localStorage.setItem("@Portfolio:project", stringfy);
+        setIsOpen(true);
+    };
+
     return (
         <ProjectSection id="projetos">
             <motion.div
@@ -39,8 +50,7 @@ const Projects = () => {
                             src={project.image}
                             alt={project.alt}
                             onClick={() => {
-                                console.log(project.index);
-                                /* Esse index usaremos para abrir o modal correspondente :D */
+                                putInLocalStorage(project);
                             }}
                         />
                     </motion.div>
@@ -62,6 +72,8 @@ const Projects = () => {
                     <img className="square" src={quadradinhos} />
                 </motion.div>
             )}
+
+            {isOpen && <Modal setIsOpen={setIsOpen} />}
         </ProjectSection>
     );
 };

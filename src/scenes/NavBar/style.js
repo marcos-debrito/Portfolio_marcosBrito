@@ -64,6 +64,7 @@ export const MenuMobile = styled.div`
         display: flex;
         flex-direction: row-reverse;
         padding: 50px 40px 0 0;
+      
     }
 
     .Container {

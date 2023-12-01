@@ -1,12 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Nav, MenuMobile } from "./style";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../../Hooks";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const Link = ({
+    page,
+    selectedPage,
+    setSelectedPage,
+    animationButtonMobile,
+}) => {
     const lowerCasePage = page.toLowerCase();
     /* Opções possíveis: inicio, habilidades, projetos, contato */
+
+    const animationAfterClick = () => {
+        /* Change the page */
+        setSelectedPage(lowerCasePage);
+
+        /* Close de right modal */
+        setTimeout(() => {
+            animationButtonMobile();
+        }, 200);
+    };
     return (
         <AnchorLink
             className={`animation ${
@@ -14,7 +29,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
             }`}
             href={`#${lowerCasePage}`}
             onClick={() => {
-                setSelectedPage(lowerCasePage);
+                animationAfterClick();
             }}
         >
             {page}
@@ -35,6 +50,7 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
     portanto, iremos renderizar o menu hamburguer quando essa condição 
     for falsa
     */
+
     const animationButtonMobile = () => {
         setIsMenuOpen(true);
         setTimeout(() => {
@@ -96,21 +112,25 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
                                 page="Início"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                animationButtonMobile={animationButtonMobile}
                             />
                             <Link
                                 page="Habilidades"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                animationButtonMobile={animationButtonMobile}
                             />
                             <Link
                                 page="Projetos"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                animationButtonMobile={animationButtonMobile}
                             />
                             <Link
                                 page="Contato"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                animationButtonMobile={animationButtonMobile}
                             />
                         </div>
                     </MenuMobile>
