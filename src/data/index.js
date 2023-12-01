@@ -23,7 +23,7 @@ const projectsData = [
     {
         image: project3,
         alt: "Project 3",
-        desc: "Kenzie Hub é uma plataforma que podemos cadastrar usuários e logar na sua conta. Quando estiver logado, pode registrar e atualizar suas tecnologias. Possui proteção de rotas e",
+        desc: "Kenzie Hub é uma plataforma que podemos cadastrar usuários e logar na sua conta. Quando estiver logado, pode registrar e atualizar suas tecnologias. Possui proteção de rotas e autenticação de usuários",
         github: "https://github.com/marcos-debrito/M3_KenzieAcademy/tree/main/M3_04_KenzieHub",
         vercel: "https://m3-react-entrega-kenzie-hub-marcosbrito.vercel.app/",
     },

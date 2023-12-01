@@ -31,7 +31,6 @@ const Landing = () => {
             {/* Main Section */}
             <div className="containerTexts">
                 {/* Headings Section */}
-
                 <motion.div
                     initial="hidden"
                     whileInView="visible"

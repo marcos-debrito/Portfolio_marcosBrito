@@ -16,20 +16,6 @@ function App() {
     const isAboveSmallScreens = useMediaQuery("(min-width: 600px)");
     /* Retorna true quando está acima de 1060px e false caso o contrário*/
 
-    useEffect(() => {
-        const handleScroll = (e) => {
-            e.preventDefault();
-        };
-
-        // Adiciona um ouvinte de evento para o evento de rolagem
-        window.addEventListener("wheel", handleScroll, { passive: false });
-
-        // Limpa o ouvinte de evento quando o componente é desmontado
-        return () => {
-            window.removeEventListener("wheel", handleScroll);
-        };
-    }, []);
-
     return (
         <>
             <Toaster />
