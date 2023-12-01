@@ -18,7 +18,7 @@ export const SkillSection = styled.section`
         max-width: 500px;
         margin-top: 100px;
         gap: 2rem;
-        z-index: 50;
+        z-index: 30;
 
         .Colorized {
             background: var(--c-secondary);
@@ -43,7 +43,8 @@ export const SkillSection = styled.section`
 
     @media (min-width: 1060px) {
         flex-direction: row;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        gap: 2rem;
         align-items: center;
         height: 100vh;
     }

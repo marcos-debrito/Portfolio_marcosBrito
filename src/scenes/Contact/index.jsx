@@ -59,7 +59,7 @@ const ContactMe = () => {
                     autoComplete="off"
                     target="_blank"
                     onSubmit={handleSubmit(submit)}
-                    action="https://formsubmit.co/2e86a37e04be39df1787148f4f0dd62a"
+                    action="https://formsubmit.com/marcos.debrito@Outlook.com"
                     method="POST"
                 >
                     <MotionDiv>

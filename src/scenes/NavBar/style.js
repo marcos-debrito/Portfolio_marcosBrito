@@ -13,7 +13,8 @@ export const Nav = styled.nav`
     .ContainerNav {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+
         margin: 0 auto;
         /* width: 80%; */
         max-width: 1500px;

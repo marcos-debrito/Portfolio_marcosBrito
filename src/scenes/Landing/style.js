@@ -6,7 +6,7 @@ export const LandingPage = styled.section`
     justify-content: center;
     gap: 16px;
     padding: 2.5rem 0;
-    max-width: 1500px;
+    max-width: 1200px;
     height: 100%;
     margin: 30px auto;
     padding: 0 50px;
@@ -74,7 +74,7 @@ export const LandingPage = styled.section`
     @media (min-width: 1060px) {
         /* display: flex; */
         flex-direction: row;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-items: center;
         height: 100vh;
         margin: 0 auto;

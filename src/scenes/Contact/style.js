@@ -9,7 +9,6 @@ export const ContactSection = styled.section`
     min-height: 100vh;
     margin: 0 auto;
     position: relative;
-    margin: 200px auto;
 
     .ContactContainer {
         margin: 0 auto;
@@ -68,6 +67,7 @@ export const ContactSection = styled.section`
                 }
                 .sendMessage {
                     font-weight: bold;
+                    font-family: var(--font-primary);
                     background: #df6a6a;
                     color: white;
                     padding: 15px 10px;
@@ -96,6 +96,10 @@ export const ContactSection = styled.section`
         top: 0;
         right: 0;
         z-index: 0;
+    }
+
+    @media (min-width: 650px) {
+        margin: 200px auto;
     }
 
     @media (min-width: 1060px) {

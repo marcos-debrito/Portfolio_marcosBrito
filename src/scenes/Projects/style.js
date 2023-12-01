@@ -23,6 +23,8 @@ export const ProjectSection = styled.section`
         gap: 4px;
         z-index: 10;
         max-height: 60vh;
+        max-width: 720px;
+        margin: 0 auto;
 
         div {
             display: flex;
@@ -30,7 +32,7 @@ export const ProjectSection = styled.section`
 
             img {
                 width: 35vw;
-                max-width: 250px;
+                max-width: 200px;
                 max-height: 250px;
             }
         }
@@ -64,7 +66,7 @@ export const ProjectSection = styled.section`
         .containerProjects {
             display: flex;
             flex-direction: row;
-            max-width: 800px;
+            max-width: 720px;
         }
     }
 `;
