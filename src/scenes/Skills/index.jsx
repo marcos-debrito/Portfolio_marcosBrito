@@ -20,12 +20,7 @@ const Skills = () => {
                     visible: { opacity: 1, scale: 1 },
                 }}
             >
-                <h2>Habilidades - Tecnologias</h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Dicta sapiente nobis odio libero. Aliquam,
-                </p>
+                <h1>Habilidades em Tecnologias</h1>
 
                 <div className="Colorized">
                     <span>Hard Skills </span>

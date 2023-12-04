@@ -82,7 +82,6 @@ export const ContactSection = styled.section`
     }
 
     .squareLeft {
-        /*  width: 60vw; */
         overflow: hidden;
         position: absolute;
         bottom: 0;

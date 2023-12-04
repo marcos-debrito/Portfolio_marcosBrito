@@ -15,6 +15,8 @@ export const SkillSection = styled.section`
     .left {
         display: flex;
         flex-direction: column;
+        text-align: center;
+
         max-width: 500px;
         margin-top: 100px;
         gap: 2rem;
@@ -43,7 +45,6 @@ export const SkillSection = styled.section`
 
     @media (min-width: 1060px) {
         flex-direction: row;
-        /* justify-content: space-between; */
         gap: 2rem;
         align-items: center;
         height: 100vh;

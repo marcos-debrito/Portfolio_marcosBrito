@@ -11,12 +11,11 @@ const Link = ({
     animationButtonMobile,
 }) => {
     const lowerCasePage = page.toLowerCase();
-    /* Opções possíveis: inicio, habilidades, projetos, contato */
+    /* Opções possíveis: início, habilidades, projetos, contato */
 
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
 
     const animationAfterClick = () => {
-        /* Change the page */
         setSelectedPage(lowerCasePage);
 
         /* Caso esteja em desktop, nao executa a animação do mobile! */
@@ -50,7 +49,6 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-  
 
     const animationButtonMobile = () => {
         setIsMenuOpen(true);

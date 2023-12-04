@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { useState, useEffect, useRef } from "react";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 import useMediaQuery from "./Hooks";
@@ -14,52 +15,55 @@ function App() {
     const [selectedPage, setSelectedPage] = useState("início");
     const isAboveSmallScreens = useMediaQuery("(min-width: 600px)");
 
-    const landingRef = useRef(null);
-    const skillsRef = useRef(null);
-    const projectsRef = useRef(null);
-    const contactMeRef = useRef(null);
+    const sectionRefs = {
+        landing: useRef(null),
+        skills: useRef(null),
+        projects: useRef(null),
+        contactMe: useRef(null),
+    };
 
     const controls = useAnimation();
 
     const handleIntersection = (entry, targetPage) => {
         if (entry.isIntersecting) {
-            setSelectedPage(targetPage);
+            switch (targetPage) {
+                case "landing":
+                    setSelectedPage("início");
+                    break;
+                case "skills":
+                    setSelectedPage("habilidades");
+                    break;
+                case "projects":
+                    setSelectedPage("projetos");
+                    break;
+                case "contactMe":
+                    setSelectedPage("contato");
+                    break;
+            }
         }
     };
-    useEffect(() => {
+
+    const setupObserver = (ref, targetPage) => {
         const observerOptions = {
             threshold: 0.5,
         };
 
-        const observerLanding = new IntersectionObserver(
-            (entries) => handleIntersection(entries[0], "início"),
+        const observer = new IntersectionObserver(
+            (entries) => handleIntersection(entries[0], targetPage),
             observerOptions
         );
-        observerLanding.observe(landingRef.current);
+        observer.observe(ref.current);
 
-        const observerSkills = new IntersectionObserver(
-            (entries) => handleIntersection(entries[0], "habilidades"),
-            observerOptions
-        );
-        observerSkills.observe(skillsRef.current);
+        return observer;
+    };
 
-        const observerProjects = new IntersectionObserver(
-            (entries) => handleIntersection(entries[0], "projetos"),
-            observerOptions
+    useEffect(() => {
+        const observers = Object.entries(sectionRefs).map(([key, ref]) =>
+            setupObserver(ref, key)
         );
-        observerProjects.observe(projectsRef.current);
-
-        const observerContactMe = new IntersectionObserver(
-            (entries) => handleIntersection(entries[0], "contato"),
-            observerOptions
-        );
-        observerContactMe.observe(contactMeRef.current);
 
         return () => {
-            observerLanding.disconnect();
-            observerSkills.disconnect();
-            observerProjects.disconnect();
-            observerContactMe.disconnect();
+            observers.forEach((observer) => observer.disconnect());
         };
     }, []);
 
@@ -81,37 +85,21 @@ function App() {
                 </div>
             )}
 
-            <motion.div
-                ref={landingRef}
-                animate={controls}
-                transition={{ duration: 0.5 }}
-            >
-                <Landing />
-            </motion.div>
+            {Object.entries(sectionRefs).map(([key, ref]) => (
+                <motion.div
+                    key={key}
+                    ref={ref}
+                    animate={controls}
+                    transition={{ duration: 0.5 }}
+                >
+                    {key === "landing" && <Landing />}
+                    {key === "skills" && <Skills />}
+                    {key === "projects" && <Projects />}
+                    {key === "contactMe" && <ContactMe />}
+                </motion.div>
+            ))}
 
-            <motion.div
-                ref={skillsRef}
-                animate={controls}
-                transition={{ duration: 0.5 }}
-            >
-                <Skills />
-            </motion.div>
-
-            <motion.div
-                ref={projectsRef}
-                animate={controls}
-                transition={{ duration: 0.5 }}
-            >
-                <Projects />
-            </motion.div>
-
-            <motion.div
-                ref={contactMeRef}
-                animate={controls}
-                transition={{ duration: 0.5 }}
-            >
-                <ContactMe />
-            </motion.div>
+            <Analytics />
         </>
     );
 }

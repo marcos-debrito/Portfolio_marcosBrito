@@ -72,21 +72,18 @@ export const LandingPage = styled.section`
     }
 
     @media (min-width: 1060px) {
-        /* display: flex; */
         flex-direction: row;
-        /* justify-content: space-between; */
+
         align-items: center;
         height: 100vh;
-        margin: 0 auto;
 
         .containerImage {
             order: 2;
             max-width: 500px;
-            margin-top: 200px;
         }
 
         .containerTexts {
-            margin-top: 10rem;
+            margin-top: 2rem;
 
             div {
                 text-align: start;

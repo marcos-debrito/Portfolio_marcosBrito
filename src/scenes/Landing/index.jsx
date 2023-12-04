@@ -6,7 +6,7 @@ import quadradinhos from "../../assets/quadradinhos_inicio.svg";
 import SocialMediaIcons from "../../Components/SocialMedia/SocialMediaIcons";
 
 const Landing = () => {
-    const isAboveMediumScreens = useMediaQuery("(min-width: 1420px)");
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
     return (
         /* Section -> LandingPage */
@@ -46,9 +46,9 @@ const Landing = () => {
                     </p>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Numquam similique fuga odit incidunt unde at,
-                        repudiandae
+                        Desenvolvedor full stack apaixonado por inovação, sempre
+                        pronto para aprender e colaborar, buscando impulsionar o
+                        sucesso das empresas através da tecnologia.
                     </p>
                 </motion.div>
 

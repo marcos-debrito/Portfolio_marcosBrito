@@ -54,8 +54,6 @@ export const ProjectSection = styled.section`
     }
 
     @media (min-width: 1060px) {
-        /* flex-direction: row; */
-        justify-content: space-between;
         align-items: center;
         min-height: 100vh;
 

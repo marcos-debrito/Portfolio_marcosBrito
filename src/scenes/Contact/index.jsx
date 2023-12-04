@@ -22,7 +22,7 @@ const ContactMe = () => {
     });
 
     const submit = async (e) => {
-        toast.success("Mensagem enviada!", {
+        toast.success("EM MANUTENÇÃO!", {
             style: {
                 border: "1px solid #010026",
                 padding: "16px",
@@ -30,7 +30,7 @@ const ContactMe = () => {
                 background: "#305080",
             },
             iconTheme: {
-                primary: "#6cdf6a",
+                primary: "#dfca6a",
                 secondary: "#FFFAEE",
             },
         });

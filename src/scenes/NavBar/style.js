@@ -1,24 +1,20 @@
 import styled, { keyframes } from "styled-components";
 
 export const Nav = styled.nav`
-    z-index: 40; //para ficar acima dos demais items na pagina
+    z-index: 40;
     width: 100%;
     position: fixed;
     top: 0px;
     padding: 0.2rem 0.2rem;
     background: #010026d4;
-    /* backdrop-filter:; */
     backdrop-filter: ${(props) => (props.$blur ? "blur(3px)" : "none")};
 
     .ContainerNav {
         display: flex;
         align-items: center;
         justify-content: space-around;
-
         margin: 0 auto;
-        /* width: 80%; */
         max-width: 1500px;
-        /* padding: 0 1rem; */
 
         .desktop {
             margin: 0 1rem;

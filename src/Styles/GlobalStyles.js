@@ -53,6 +53,10 @@ input{
     all: unset;
 }
 
+section {
+    margin-bottom: 100px;
+}
+
 .animation {
     transition: 0.3s ease-in-out;
     text-decoration: none
