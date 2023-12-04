@@ -1,25 +1,77 @@
-import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { useState, useEffect, useRef } from "react";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 import useMediaQuery from "./Hooks";
 import NavBar from "./scenes/NavBar/NavBar";
-
 import DotGroup from "./scenes/DotGroup/";
 import Landing from "./scenes/Landing/";
 import Skills from "./scenes/Skills/";
-import Projects from "./scenes/Projects/";
-import Contact from "./scenes/Contact/index.jsx/";
-
-import LineGradient from "./Components/LineGradient/";
+import Projects from "./scenes/Projects/index.jsx";
+import ContactMe from "./scenes/Contact/index.jsx/";
+import { Toaster } from "react-hot-toast";
+import { motion, useAnimation } from "framer-motion";
 
 function App() {
     const [selectedPage, setSelectedPage] = useState("início");
-    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
     const isAboveSmallScreens = useMediaQuery("(min-width: 600px)");
-    /* Retorna true quando está acima de 1060px e false caso o contrário*/
+
+    const sectionRefs = {
+        landing: useRef(null),
+        skills: useRef(null),
+        projects: useRef(null),
+        contactMe: useRef(null),
+    };
+
+    const controls = useAnimation();
+
+    const handleIntersection = (entry, targetPage) => {
+        if (entry.isIntersecting) {
+            switch (targetPage) {
+                case "landing":
+                    setSelectedPage("início");
+                    break;
+                case "skills":
+                    setSelectedPage("habilidades");
+                    break;
+                case "projects":
+                    setSelectedPage("projetos");
+                    break;
+                case "contactMe":
+                    setSelectedPage("contato");
+                    break;
+            }
+        }
+    };
+
+    const setupObserver = (ref, targetPage) => {
+        const observerOptions = {
+            threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver(
+            (entries) => handleIntersection(entries[0], targetPage),
+            observerOptions
+        );
+        observer.observe(ref.current);
+
+        return observer;
+    };
+
+    useEffect(() => {
+        const observers = Object.entries(sectionRefs).map(([key, ref]) =>
+            setupObserver(ref, key)
+        );
+
+        return () => {
+            observers.forEach((observer) => observer.disconnect());
+        };
+    }, []);
 
     return (
         <>
+            <Toaster />
             <GlobalStyle />
+
             <NavBar
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
@@ -32,13 +84,22 @@ function App() {
                     />
                 </div>
             )}
-            <Landing />
-            <LineGradient /> {/* Section Division in large Screens */}
-            <Skills />
-            <LineGradient /> {/* Section Division in large Screens */}
-            <Projects />
-            <LineGradient /> {/* Section Division in large Screens */}
-            <Contact />
+
+            {Object.entries(sectionRefs).map(([key, ref]) => (
+                <motion.div
+                    key={key}
+                    ref={ref}
+                    animate={controls}
+                    transition={{ duration: 0.5 }}
+                >
+                    {key === "landing" && <Landing />}
+                    {key === "skills" && <Skills />}
+                    {key === "projects" && <Projects />}
+                    {key === "contactMe" && <ContactMe />}
+                </motion.div>
+            ))}
+
+            <Analytics />
         </>
     );
 }

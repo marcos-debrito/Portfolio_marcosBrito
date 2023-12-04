@@ -6,9 +6,9 @@ export const LandingPage = styled.section`
     justify-content: center;
     gap: 16px;
     padding: 2.5rem 0;
-    max-width: 1500px;
+    max-width: 1200px;
     height: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 0 50px;
 
     .containerImage {
@@ -66,26 +66,24 @@ export const LandingPage = styled.section`
         width: 60vw;
         overflow: hidden;
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         right: 0;
         z-index: 0;
     }
 
     @media (min-width: 1060px) {
-        /* display: flex; */
         flex-direction: row;
-        justify-content: space-between;
+
         align-items: center;
         height: 100vh;
 
         .containerImage {
             order: 2;
             max-width: 500px;
-            margin-top: 200px;
         }
 
         .containerTexts {
-            margin-top: 10rem;
+            margin-top: 2rem;
 
             div {
                 text-align: start;

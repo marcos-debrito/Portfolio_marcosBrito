@@ -7,7 +7,7 @@ export const DotContainer = styled.div`
     position: fixed;
     top: 60%;
     right: 1.75rem;
-    z-index:20;
+    z-index: 20;
 
     a {
         height: 10px;
@@ -28,16 +28,4 @@ export const DotContainer = styled.div`
     .nonSelected {
         background: #757575;
     }
-    /*     .habilidades {
-        background: var(--c-secondary);
-        border: 2px solid white;
-    }
-    .projetos {
-        background: var(--c-secondary);
-        border: 2px solid white;
-    }
-    .contato {
-        background: var(--c-secondary);
-        border: 2px solid white;
-    } */
 `;

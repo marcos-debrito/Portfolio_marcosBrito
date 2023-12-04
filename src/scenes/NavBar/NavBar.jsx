@@ -1,12 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Nav, MenuMobile } from "./style";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../../Hooks";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const Link = ({
+    page,
+    selectedPage,
+    setSelectedPage,
+    animationButtonMobile,
+}) => {
     const lowerCasePage = page.toLowerCase();
-    /* Opções possíveis: inicio, habilidades, projetos, contato */
+    /* Opções possíveis: início, habilidades, projetos, contato */
+
+    const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
+
+    const animationAfterClick = () => {
+        setSelectedPage(lowerCasePage);
+
+        /* Caso esteja em desktop, nao executa a animação do mobile! */
+        if (isAboveSmallScreens) return;
+
+        setTimeout(() => {
+            animationButtonMobile();
+        }, 200);
+    };
+
     return (
         <AnchorLink
             className={`animation ${
@@ -14,7 +33,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
             }`}
             href={`#${lowerCasePage}`}
             onClick={() => {
-                setSelectedPage(lowerCasePage);
+                animationAfterClick();
             }}
         >
             {page}
@@ -30,11 +49,7 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
-    /* 
-    Retorna true quando está acima de 768px e false caso o contrário,
-    portanto, iremos renderizar o menu hamburguer quando essa condição 
-    for falsa
-    */
+
     const animationButtonMobile = () => {
         setIsMenuOpen(true);
         setTimeout(() => {
@@ -96,21 +111,25 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
                                 page="Início"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                animationButtonMobile={animationButtonMobile}
                             />
                             <Link
                                 page="Habilidades"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                animationButtonMobile={animationButtonMobile}
                             />
                             <Link
                                 page="Projetos"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                animationButtonMobile={animationButtonMobile}
                             />
                             <Link
                                 page="Contato"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                animationButtonMobile={animationButtonMobile}
                             />
                         </div>
                     </MenuMobile>

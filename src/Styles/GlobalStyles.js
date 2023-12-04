@@ -5,11 +5,17 @@ export const GlobalStyle = createGlobalStyle`
     --font-primary: "Comfortaa", sans-serif;
     --font-secondary: "Open Sans", sans-serif;
 
-    --c-primary: #010026;   /* Azul escuro */
-    --c-secondary: #DF6A6A; /* Salmão */
+    --c-primary: #010026;   
+    --c-secondary: #DF6A6A; 
     --c-blue: #2CBCE9;
     --c-red: #DC4492;
     --c-yellow: #FDCC49;
+}
+
+html {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 body,html{
@@ -43,6 +49,14 @@ h1{
     font-size: 36px;
 }
 
+input{
+    all: unset;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
 .animation {
     transition: 0.3s ease-in-out;
     text-decoration: none
@@ -55,28 +69,23 @@ h1{
 .início, .habilidades, .projetos, .contato{
     color: var(--c-secondary)
 }
-/* 
-.habilidades{
-    color: var(--c-secondary)
-}
-
-.projetos{
-    color: var(--c-secondary)
-}
-
-.contato{
-    color: var(--c-secondary)
-} */
 
 .DotStyle{
     width: 80%;
     margin: 0 auto;
     height: 100%
 }
+
+body::-webkit-scrollbar {
+  width: 2px; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--c-secondary); 
+  border-radius: 2px; 
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--c-primary); 
+}
 `;
-
-/* 
-font-family: 'Comfortaa', sans-serif;
-font-family: 'Open Sans', sans-serif;
-
-*/

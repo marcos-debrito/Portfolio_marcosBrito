@@ -15,7 +15,9 @@ const DoutGroup = ({ selectedPage, setSelectedPage }) => {
             />
             <AnchorLink
                 className={`animation ${
-                    selectedPage === "habilidades" ? "habilidades" : "nonSelected"
+                    selectedPage === "habilidades"
+                        ? "habilidades"
+                        : "nonSelected"
                 }`}
                 href="#habilidades"
                 onClick={() => {
