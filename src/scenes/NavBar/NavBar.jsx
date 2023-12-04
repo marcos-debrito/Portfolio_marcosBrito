@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
 import { Nav, MenuMobile } from "./style";
+import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../../Hooks";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
@@ -102,6 +102,7 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
                         <div className="CloseButton">
                             <IoMdClose
                                 size={30}
+                                color="black"
                                 onClick={animationButtonMobile}
                             />
                         </div>

@@ -53,7 +53,7 @@ export const MenuMobile = styled.div`
     right: 0;
     bottom: 0;
     height: 100%;
-    background: #305080;
+    background: var(--backgorund-menu-mobile);
     gap: 80px;
     animation: ${(props) => (props.$isopen ? slideOut : slideIn)} 0.5s ease;
 

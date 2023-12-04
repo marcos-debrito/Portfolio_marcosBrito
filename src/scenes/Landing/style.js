@@ -79,7 +79,7 @@ export const LandingPage = styled.section`
 
         .containerImage {
             order: 2;
-            max-width: 500px;
+            max-width: 30vw;
             margin-top: 1rem;
         }
 

@@ -15,6 +15,7 @@ export const ContactSection = styled.section`
         width: 80vw;
         max-width: 500px;
         background: #091034;
+        z-index: 5;
 
         form {
             width: 80%;
@@ -35,7 +36,7 @@ export const ContactSection = styled.section`
                     padding: 20px 0;
                     display: flex;
                     justify-content: center;
-
+                    color: black;
                     min-width: 90%;
                     padding: 20px 12px;
 
@@ -44,11 +45,12 @@ export const ContactSection = styled.section`
                 .text {
                     all: unset;
                     resize: none;
+
                     min-width: 90%;
                     height: 200px;
                     background-color: #fef9ef;
                     padding: 5px 12px;
-                    color: white;
+                    color: black;
                     border: 1px solid transparent;
                 }
 

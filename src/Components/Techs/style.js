@@ -22,7 +22,6 @@ export const ContainerTechs = styled.div`
             gap: 2rem;
             cursor: pointer;
             transition: 0.3s ease-in-out;
-            width: 60px;
 
             span {
                 opacity: 0;

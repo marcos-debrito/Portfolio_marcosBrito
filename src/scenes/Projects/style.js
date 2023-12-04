@@ -22,7 +22,6 @@ export const ProjectSection = styled.section`
         justify-content: center;
         gap: 4px;
         z-index: 10;
-        max-height: 60vh;
         max-width: 720px;
         margin: 0 auto;
 
@@ -64,7 +63,6 @@ export const ProjectSection = styled.section`
         .containerProjects {
             display: flex;
             flex-direction: row;
-            max-width: 720px;
         }
     }
 `;

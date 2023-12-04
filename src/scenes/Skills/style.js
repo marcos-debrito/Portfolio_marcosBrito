@@ -44,9 +44,12 @@ export const SkillSection = styled.section`
     }
 
     @media (min-width: 1060px) {
-        flex-direction: row;
         gap: 2rem;
         align-items: center;
         height: 100vh;
+
+        .left {
+            max-width: 30vw;
+        }
     }
 `;

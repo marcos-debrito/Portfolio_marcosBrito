@@ -12,7 +12,7 @@ import left from "../../assets/squares/squares_contact_left.svg";
 import { MotionDiv } from "../../Components/MotionDiv/index.jsx";
 
 const ContactMe = () => {
-    const isAboveMediumScreens = useMediaQuery("(min-width: 1420px)");
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
     const {
         register,
         handleSubmit,

@@ -10,7 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     --c-blue: #2CBCE9;
     --c-red: #DC4492;
     --c-yellow: #FDCC49;
+    --backgorund-menu-mobile: #EBDECA;
 }
+
+
 
 html {
   touch-action: manipulation;
@@ -59,7 +62,8 @@ section {
 
 .animation {
     transition: 0.3s ease-in-out;
-    text-decoration: none
+    text-decoration: none;
+    font: bold;
 }
 
 .animation:hover{
