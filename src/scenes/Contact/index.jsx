@@ -6,8 +6,9 @@ import { verifyForm } from "./schema.js";
 import toast from "react-hot-toast";
 import useMediaQuery from "../../Hooks/index.jsx";
 
-import right from "../../assets/square_contact_right.svg";
-import left from "../../assets/square_contact_left.svg";
+import right from "../../assets/squares/squares_contact_right.svg";
+import left from "../../assets/squares/squares_contact_left.svg";
+
 import { MotionDiv } from "../../Components/MotionDiv/index.jsx";
 
 const ContactMe = () => {

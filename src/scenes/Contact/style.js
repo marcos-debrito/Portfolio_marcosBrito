@@ -28,9 +28,10 @@ export const ContactSection = styled.section`
 
             div {
                 width: 100%;
+
                 .name,
                 .email {
-                    background-color: #afbaf1;
+                    background-color: #fef9ef;
                     padding: 20px 0;
                     display: flex;
                     justify-content: center;
@@ -45,21 +46,16 @@ export const ContactSection = styled.section`
                     resize: none;
                     min-width: 90%;
                     height: 200px;
-                    background-color: #afbaf1;
+                    background-color: #fef9ef;
                     padding: 5px 12px;
                     color: white;
                     border: 1px solid transparent;
-                }
-                .name::placeholder,
-                .email::placeholder,
-                .text::placeholder {
-                    color: white;
                 }
 
                 .name:hover,
                 .email:hover,
                 .text:hover {
-                    border: 1px solid white;
+                    border: 1px solid var(--c-secondary);
                 }
                 span {
                     color: red;
@@ -68,7 +64,7 @@ export const ContactSection = styled.section`
                 .sendMessage {
                     font-weight: bold;
                     font-family: var(--font-primary);
-                    background: #df6a6a;
+                    background: var(--c-secondary);
                     color: white;
                     padding: 15px 10px;
                     width: 100%;

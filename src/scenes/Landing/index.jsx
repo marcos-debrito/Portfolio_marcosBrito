@@ -2,7 +2,7 @@ import useMediaQuery from "../../Hooks";
 import { motion } from "framer-motion";
 import { LandingPage, AnchorDownload } from "./style";
 import profileImage from "../../assets/profilePhoto.png";
-import quadradinhos from "../../assets/quadradinhos_inicio.svg";
+import quadradinhos from "../../assets/squares/squares_landing.svg";
 import SocialMediaIcons from "../../Components/SocialMedia/SocialMediaIcons";
 
 const Landing = () => {

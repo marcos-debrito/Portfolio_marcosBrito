@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --font-secondary: "Open Sans", sans-serif;
 
     --c-primary: #010026;   
-    --c-secondary: #DF6A6A; 
+    --c-secondary: #DE971D; 
     --c-blue: #2CBCE9;
     --c-red: #DC4492;
     --c-yellow: #FDCC49;

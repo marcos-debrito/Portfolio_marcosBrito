@@ -1,11 +1,11 @@
 import useMediaQuery from "../../Hooks";
 import { SkillSection } from "./style";
 import Techs from "../../Components/Techs/";
-import quadradinhos from "../../assets/square_skills.svg";
+import quadradinhos from "../../assets/squares/squares_skills.svg";
 import { motion } from "framer-motion";
 
 const Skills = () => {
-    const isAboveMediumScreens = useMediaQuery("(min-width: 1420px)");
+    const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     return (
         /* Section -> Habilidades */
         <SkillSection id="habilidades" className="Container">

@@ -1,14 +1,14 @@
 import { ProjectSection } from "./style.js";
 import { motion } from "framer-motion";
 import projectsData from "../../data/index.js";
-import quadradinhos from "../../assets/quadradinhos_projetos.svg";
+import quadradinhos from "../../assets/squares/squares_projects.svg";
 import useMediaQuery from "../../Hooks/index.jsx";
 import { useState } from "react";
 import { Modal } from "../../Components/Modal/index.jsx";
 
 const Projects = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const isAboveMediumScreens = useMediaQuery("(min-width: 1420px)");
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
     const putInLocalStorage = (project) => {
         const stringfy = JSON.stringify(project);
