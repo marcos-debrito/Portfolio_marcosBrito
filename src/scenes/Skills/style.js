@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SkillSection = styled.section`
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     max-width: 1500px;
     min-height: 100vh;

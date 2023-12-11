@@ -70,8 +70,8 @@ section {
     color: var(--c-secondary)
 } 
 
-.início, .habilidades, .projetos, .contato{
-    color: var(--c-secondary)
+.início, .habilidades, .projetos, .certificados{
+    color: var(--c-secondary);
 }
 
 .DotStyle{

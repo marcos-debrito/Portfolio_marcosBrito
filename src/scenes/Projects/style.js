@@ -7,7 +7,6 @@ export const ProjectSection = styled.section`
     max-width: 1500px;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 0 50px;
     position: relative;
 
     .titleProject {

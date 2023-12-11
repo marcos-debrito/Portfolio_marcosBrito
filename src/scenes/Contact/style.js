@@ -1,105 +1,69 @@
 import styled from "styled-components";
 
-export const ContactSection = styled.section`
+export const CertificatesSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+
+  .ContainerImages {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1500px;
-    min-height: 100vh;
+    flex-wrap: wrap;
+    width: 300px;
     margin: 0 auto;
-    position: relative;
 
-    .ContactContainer {
-        margin: 0 auto;
-        width: 80vw;
-        max-width: 500px;
-        background: #091034;
-        z-index: 5;
+    justify-content: center;
 
-        form {
-            width: 80%;
-            max-width: 300px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-            padding: 30px 0px;
+    .item {
+      z-index: 10;
 
-            div {
-                width: 100%;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        transition: 0.5s ease-in-out;
+      }
 
-                .name,
-                .email {
-                    background-color: #fef9ef;
-                    padding: 20px 0;
-                    display: flex;
-                    justify-content: center;
-                    color: black;
-                    min-width: 90%;
-                    padding: 20px 12px;
-
-                    border: 1px solid transparent;
-                }
-                .text {
-                    all: unset;
-                    resize: none;
-
-                    min-width: 90%;
-                    height: 200px;
-                    background-color: #fef9ef;
-                    padding: 5px 12px;
-                    color: black;
-                    border: 1px solid transparent;
-                }
-
-                .name:hover,
-                .email:hover,
-                .text:hover {
-                    border: 1px solid var(--c-secondary);
-                }
-                span {
-                    color: red;
-                    font-size: 13px;
-                }
-                .sendMessage {
-                    font-weight: bold;
-                    font-family: var(--font-primary);
-                    background: var(--c-secondary);
-                    color: white;
-                    padding: 15px 10px;
-                    width: 100%;
-                    transition: 0.3s ease;
-                }
-                .sendMessage:hover {
-                    transform: scale(1.03);
-                }
-            }
-        }
+      img:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
     }
+  }
 
-    .squareLeft {
-        overflow: hidden;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 0;
-    }
+  .squareLeft {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
 
-    .squareRight {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 0;
-    }
+  .squareRight {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
 
-    @media (min-width: 650px) {
-        margin: 200px auto;
-    }
+  @media (min-width: 650px) {
+    margin: 200px auto;
 
-    @media (min-width: 1060px) {
-        height: 100vh;
+    .ContainerImages {
+      width: 50vw;
+
+      .item {
+        height: 300px;
+        padding: 20px;
+      }
     }
+  }
+
+  @media (min-width: 1060px) {
+    height: 100vh;
+  }
 `;
